@@ -7,13 +7,12 @@ Maintainer: The package maintainer <gagalab@foxmail.com>
 Description: Easily get sequences.
 License: GPL-2
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 Imports: 
     biomaRt,
-    Biostrings,
     BSgenome,
     BSgenome.Hsapiens.UCSC.hg38,
     BSgenome.Mmusculus.UCSC.mm39,
-    dbplyr,
-    dplyr
+    dplyr,
+    Biostrings
 RoxygenNote: 7.3.2
