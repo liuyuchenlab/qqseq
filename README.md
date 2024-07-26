@@ -20,10 +20,11 @@ library(qqseq)
 
 
 result <- qqseq("ENSMUST00000127786", "mouse")
+###### 这里会在当前文件夹保存一个transcrpt_id.csv的文件
 
 
-#### 结果
-![image](https://github.com/user-attachments/assets/4fcf774e-5869-43c4-beae-ca4597a81124)
+#### 结果与ESEMBL数据库一致
+
 
 
 # 保存序列
