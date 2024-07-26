@@ -23,7 +23,8 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 
 ###### 这里会在当前文件夹保存一个transcrpt_id.csv的文件
-#### 结果与ESEMBL数据库一致
+#### start和end与ESEMBL是反的
+#### 保存的序列与ESEMBL一致
 
 
 # 负义链
@@ -32,8 +33,14 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 ![image](https://github.com/user-attachments/assets/c76753ae-77bd-4c38-9ce4-8357c6bdc872)
 
 
-###### qqseq
+###### qqseq位置
 ![image](https://github.com/user-attachments/assets/f88d7fe3-5ff9-4e93-88bb-c69ddd40d819)
+
+
+###### qqseq序列
+![image](https://github.com/user-attachments/assets/5d917bce-7129-4b3f-aea4-553627fa1e4e)
+
+
 
 # 正义链
 ##### ENSMUST00000152916
@@ -41,8 +48,13 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 ![image](https://github.com/user-attachments/assets/5533702a-b1b0-485c-a4a2-24373c6a64e3)
 
 
-###### qqseq
+###### qqseq位置
 ![image](https://github.com/user-attachments/assets/602a0a03-f713-4ef9-84ed-86fe07f4f21a)
+
+
+###### qqseq序列
+![image](https://github.com/user-attachments/assets/52d9af0b-53b8-4cab-9a1d-6386be75816b)
+
 
 
 ###### 有时会出现esembl链接超时的问题，不过问题不大，再试一次就好了
