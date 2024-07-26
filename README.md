@@ -15,20 +15,20 @@ library(qqseq)
 
 
 # 示例使用
-#使用esembl的转录本id来进行索引，目前只能用mm39的小鼠和hg38的人类，需要其他物种或者参考基因组的可以自己改一下代码，十分方便
-#小鼠mouse，人类human
+###### 使用esembl的转录本id来进行索引，目前只能用mm39的小鼠和hg38的人类，需要其他物种或者参考基因组的可以自己改一下代码，十分方便
+###### 小鼠mouse，人类human
 
 
 result <- qqseq("ENSMUST00000127786", "mouse")
 
 
-###### 保存序列
-# 保存为CSV文件
+#### 结果
+![image](https://github.com/user-attachments/assets/4fcf774e-5869-43c4-beae-ca4597a81124)
+
+
+# 保存序列
+###### 保存为CSV文件
 
 
 write.csv(result, file = "transcript_sequences.csv", row.names = FALSE)
-
-#### 结果
-
-
 
