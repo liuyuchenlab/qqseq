@@ -23,8 +23,8 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 
 ###### 这里会在当前文件夹保存一个transcrpt_id.csv的文件
-#### start和end与ESEMBL是反的
-#### 保存的序列与ESEMBL一致
+#### qqseq检测负义链的start和end与ESEMBL是反的
+#### 但是保存的序列与ESEMBL一致
 
 
 # 负义链
