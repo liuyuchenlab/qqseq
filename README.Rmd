@@ -1,42 +1,16 @@
----
-output: github_document
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
-# qqseq
-
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of qqseq is to Quickly query and collect this exon and intron sequence
-
-## Installation
-
-You can install the development version of qqseq like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(qqseq)
-## basic example code
+# qqseq！ 
+###### 在学习基因敲除实验时写的，可以一键获得转录本的外显子和内含子序列
+library(devtools)  
+###### 如果连接失败：  
+###### 1.尝试修复Hosts配置  
+###### 2.尝试Win+R，输入inetcpl.cpl 直接打开Internet选项。打开后，在高级中勾选使用TLS 1.0、使用TLS 1.1、使用TLS 1.2、使用TLS 1.3。
+devtools::install_github('liuyuchenlab/qqseq')  
+library(qqseq)  
 # 示例使用
+#使用esembl的转录本id来进行索引，目前只能用mm39的小鼠和hg38的人类，需要其他物种或者参考基因组的可以自己改一下代码，十分方便
+#小鼠mouse，人类human
 result <- qqseq("ENSMUST00000127786", "mouse")
+###### 保存序列
 # 保存为CSV文件
 write.csv(result, file = "transcript_sequences.csv", row.names = FALSE)
-```
+
