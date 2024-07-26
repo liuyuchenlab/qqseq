@@ -20,16 +20,9 @@ library(qqseq)
 
 
 result <- qqseq("ENSMUST00000127786", "mouse")
+
+
 ###### 这里会在当前文件夹保存一个transcrpt_id.csv的文件
-
-
 #### 结果与ESEMBL数据库一致
 
-
-
-# 保存序列
-###### 保存为CSV文件
-
-
-write.csv(result, file = "transcript_sequences.csv", row.names = FALSE)
 
