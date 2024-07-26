@@ -26,3 +26,26 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 #### 结果与ESEMBL数据库一致
 
 
+# 负义链
+##### ENSMUST00000153883
+###### ESEMBL
+![image](https://github.com/user-attachments/assets/c76753ae-77bd-4c38-9ce4-8357c6bdc872)
+
+
+###### qqseq
+![image](https://github.com/user-attachments/assets/f88d7fe3-5ff9-4e93-88bb-c69ddd40d819)
+
+# 正义链
+##### ENSMUST00000152916
+###### ESEMBL
+![image](https://github.com/user-attachments/assets/5533702a-b1b0-485c-a4a2-24373c6a64e3)
+
+
+###### qqseq
+![image](https://github.com/user-attachments/assets/602a0a03-f713-4ef9-84ed-86fe07f4f21a)
+
+
+###### 有时会出现esembl链接超时的问题，不过问题不大，再试一次就好了
+
+
+
