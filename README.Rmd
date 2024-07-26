@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# qqseq
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of qqseq is to Quickly query and collect this exon and intron sequence
+
+## Installation
+
+You can install the development version of qqseq like so:
+
+``` r
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(qqseq)
+## basic example code
+# 示例使用
+result <- qqseq("ENSMUST00000127786", "mouse")
+# 保存为CSV文件
+write.csv(result, file = "transcript_sequences.csv", row.names = FALSE)
+```
