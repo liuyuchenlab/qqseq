@@ -8,7 +8,7 @@ Description: Easily get sequences.
 License: GPL-2
 Encoding: UTF-8
 LazyData: false
-Depends: 
+Imports: 
     biomaRt,
     BSgenome,
     BSgenome.Hsapiens.UCSC.hg38,
