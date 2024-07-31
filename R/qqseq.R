@@ -60,9 +60,12 @@ qqseq <- function(transcript_id, species, max_retries = 20) {
   )
 
   transcript_info <- get_biomart_data(
-    attributes = c("chromosome_name", "transcript_start", "transcript_end", "strand"),
+    attributes = c("chromosome_name", "transcript_start", "transcript_end", "strand", "external_gene_name"),
     filters = "ensembl_transcript_id", values = transcript_id, mart = ensembl, max_retries = max_retries
   )
+
+  # Extract gene name
+  gene_name <- unique(transcript_info$external_gene_name)
 
   # Calculate exon and intron positions
   if (transcript_info$strand == 1) {  # Positive strand
@@ -87,7 +90,7 @@ qqseq <- function(transcript_id, species, max_retries = 20) {
       print(introns)
     }
   } else {  # Negative strand
-    exons <- dplyr::arrange(exons, dplyr::desc(exon_chrom_start))  # Sort by start position in descending order
+    exons <- dplyr::arrange(exons, desc(exon_chrom_start))  # Sort by start position in descending order
 
     if (nrow(exons) < 2) {
       # Only one exon
@@ -100,7 +103,7 @@ qqseq <- function(transcript_id, species, max_retries = 20) {
         start = exons$exon_chrom_end[-1] + 1,  # Until the second last exon
         end = exons$exon_chrom_start[-nrow(exons)] - 1  # From the second exon
       ) %>%
-        dplyr::arrange(dplyr::desc(start))  # Sort introns by start position in descending order
+        dplyr::arrange(desc(start))  # Sort introns by start position in descending order
       # Add strand column
       introns$strand <- exons$strand[-nrow(exons)]  # Assign the strand of the previous exon to the intron
       cat("Exon positions:\n")
@@ -136,9 +139,9 @@ qqseq <- function(transcript_id, species, max_retries = 20) {
   introns_with_id <- if (!is.null(intron_sequences)) paste0("Intron_", seq_along(intron_sequences)) else NULL
 
   # Combine exons and introns and sort
-  sequences <- stats::setNames(exon_sequences, exons_with_id)
+  sequences <- setNames(exon_sequences, exons_with_id)
   if (!is.null(intron_sequences)) {
-    sequences <- c(sequences, stats::setNames(intron_sequences, introns_with_id))
+    sequences <- c(sequences, setNames(intron_sequences, introns_with_id))
   }
 
   sorted_sequences <- sequences[order(as.integer(gsub("Exon_|Intron_", "", names(sequences))))]
@@ -149,8 +152,14 @@ qqseq <- function(transcript_id, species, max_retries = 20) {
     Sequence = unlist(sorted_sequences),
     stringsAsFactors = FALSE
   )
-  # Save results to CSV file, with the file name being the transcript ID
+
+  # Create file name with date, gene name, and transcript ID
+  date_str <- format(Sys.Date(), "%Y-%m-%d")
+  file_name <- paste0(transcript_id, "_", gene_name, "_", species, ".csv")
+
+  # Save results to CSV file with the new name
   cat("Results saved to CSV file.\n")
-  utils::write.csv(sequences_df, file = paste0(transcript_id, ".csv"), row.names = FALSE)
+  utils::write.csv(sequences_df, file = file_name, row.names = FALSE)
+
   return(sequences_df)
 }
