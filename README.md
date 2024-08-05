@@ -12,6 +12,7 @@ library(devtools)
 
 
 devtools::install_github('liuyuchenlab/qqseq')  
+
 library(qqseq) 
 
 
