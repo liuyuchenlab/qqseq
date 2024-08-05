@@ -2,6 +2,8 @@
 ###### 在学习基因敲除实验时写的，可以一键获得转录本的外显子和内含子序列
 
 install.packages("devtools")
+
+
 library(devtools)  
 
 
