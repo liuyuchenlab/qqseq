@@ -10,7 +10,7 @@ library(devtools)
 ###### 如果连接失败：  
 ###### 1.尝试修复Hosts配置  
 ###### 2.尝试Win+R，输入inetcpl.cpl 直接打开Internet选项。打开后，在高级中勾选使用TLS 1.0、使用TLS 1.1、使用TLS 1.2、使用TLS 1.3。
-###### 安装前先把依赖包安装并更新，安装时会有提示
+###### 安装前先把依赖包安装并更新，安装时会有提示，可下载tar包本地安装
 
 
 devtools::install_github('liuyuchenlab/qqseq')  
