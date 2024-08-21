@@ -33,7 +33,7 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 # 负义链
 ##### ENSMUST00000153883
-###### ESEMBL
+###### ENSEMBL
 ![image](https://github.com/user-attachments/assets/c76753ae-77bd-4c38-9ce4-8357c6bdc872)
 
 
@@ -48,7 +48,7 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 # 正义链
 ##### ENSMUST00000152916
-###### ESEMBL
+###### ENSEMBL
 ![image](https://github.com/user-attachments/assets/5533702a-b1b0-485c-a4a2-24373c6a64e3)
 
 
