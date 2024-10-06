@@ -1,31 +1,31 @@
 # qqseq！ 
 ###### 在学习基因敲除实验时写的，可以一键获得转录本的外显子和内含子序列
-
+```
 install.packages("devtools")
 
 
 library(devtools)  
-
+```
 
 ###### 如果连接失败：  
 ###### 1.尝试修复Hosts配置  
 ###### 2.尝试Win+R，输入inetcpl.cpl 直接打开Internet选项。打开后，在高级中勾选使用TLS 1.0、使用TLS 1.1、使用TLS 1.2、使用TLS 1.3。
 ###### 安装前先把依赖包安装并更新，安装时会有提示，若安装失败可下载依赖包的tar包本地安装
 
-
+```
 devtools::install_github('liuyuchenlab/qqseq')  
 
 library(qqseq) 
 
-
+```
 # 示例使用
 ###### 使用esembl的转录本id来进行索引，目前只能用mm39的小鼠和hg38的人类，需要其他物种或者参考基因组的可以自己改一下代码，十分方便
 ###### 小鼠mouse，人类human
 
-
+```
 result <- qqseq("ENSMUST00000127786", "mouse")
 
-
+```
 ###### 这里会在当前文件夹保存一个transcrpt_id_gene_name_speices.csv的文件
 #### qqseq检测负义链的start和end与ESEMBL是反的
 #### 但是保存的序列与ESEMBL一致
@@ -33,7 +33,7 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 # 负义链
 ##### ENSMUST00000153883
-###### ENSEMBL
+##### ENSEMBL
 ![image](https://github.com/user-attachments/assets/c76753ae-77bd-4c38-9ce4-8357c6bdc872)
 
 
@@ -48,7 +48,7 @@ result <- qqseq("ENSMUST00000127786", "mouse")
 
 # 正义链
 ##### ENSMUST00000152916
-###### ENSEMBL
+##### ENSEMBL
 ![image](https://github.com/user-attachments/assets/5533702a-b1b0-485c-a4a2-24373c6a64e3)
 
 
